@@ -1,5 +1,5 @@
 {
-  "name": "rocketchat",
+  "name": "@rocket.chat/desktop",
   "productName": "Rocket.Chat+",
   "description": "Rocket.Chat Native Cross-Platform Desktop Application via Electron.",
   "version": "2.12.0-develop",
