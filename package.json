@@ -1,19 +1,23 @@
 {
   "name": "@rocket.chat/desktop",
-  "productName": "Rocket.Chat+",
   "description": "Rocket.Chat Native Cross-Platform Desktop Application via Electron.",
   "version": "2.12.0-develop",
-  "author": "Rocket.Chat Support <support@rocket.chat>",
-  "copyright": "© 2018, Rocket.Chat",
   "homepage": "https://rocket.chat",
+  "author": {
+      "name": "Rocket.Chat Support",
+      "email": "support@rocket.chat"
+  },
   "license": "MIT",
-  "main": "app/background.js",
+  "copyright": "© 2018, Rocket.Chat",
   "repository": {
     "type": "git",
     "url": "https://github.com/RocketChat/Rocket.Chat.Electron.git"
   },
+  "main": "app/background.js",
   "build": {
     "appId": "chat.rocket",
+    "productName": "Rocket.Chat+",
+    "artifactName": "rocketchat-${version}.${ext}",
     "files": [
       "app/**/*",
       "node_modules/**/*",
