@@ -17,7 +17,7 @@
   "main": "app/background.js",
   "build": {
     "appId": "chat.rocket",
-    "artifactName": "rocketchat-${version}.${ext}",
+    "artifactName": "rocketchat-${version}-${arch}.${ext}",
     "files": [
       "app/**/*",
       "node_modules/**/*",
@@ -59,21 +59,34 @@
     "linux": {
       "category": "GNOME;GTK;Network;InstantMessaging",
       "target": [
-        "tar.gz",
-        "deb",
-        "rpm"
+        {
+            "target": "tar.gz",
+            "arch": [ "ia32", "x64" ]
+        },
+        {
+            "target": "deb",
+            "arch": [ "ia32", "x64" ]
+        },
+        {
+            "target": "rpm",
+            "arch": [ "ia32", "x64" ]
+        },
+        {
+            "target": "snap",
+            "arch": [ "x64" ]
+        }
       ],
-      "executableName": "rocketchat",
+      "executableName": "rocketchat-desktop",
       "desktop": {
         "StartupWMClass": "Rocket.Chat+",
         "MimeType": "x-scheme-handler/rocketchat"
       }
     },
     "deb": {
-        "fpm": [ "--name=rocketchat" ]
+        "fpm": [ "--name=rocketchat-desktop" ]
     },
     "rpm": {
-        "fpm": [ "--name=rocketchat" ]
+        "fpm": [ "--name=rocketchat-desktop" ]
     },
     "publish": [
       {
