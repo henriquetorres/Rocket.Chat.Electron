@@ -1,11 +1,12 @@
 {
   "name": "@rocket.chat/desktop",
+  "productName": "Rocket.Chat+",
   "description": "Rocket.Chat Native Cross-Platform Desktop Application via Electron.",
   "version": "2.12.0-develop",
   "homepage": "https://rocket.chat",
   "author": {
-      "name": "Rocket.Chat Support",
-      "email": "support@rocket.chat"
+    "name": "Rocket.Chat Support",
+    "email": "support@rocket.chat"
   },
   "license": "MIT",
   "copyright": "© 2018, Rocket.Chat",
@@ -16,7 +17,6 @@
   "main": "app/background.js",
   "build": {
     "appId": "chat.rocket",
-    "productName": "Rocket.Chat+",
     "artifactName": "rocketchat-${version}.${ext}",
     "files": [
       "app/**/*",
@@ -29,22 +29,22 @@
       "servers.json"
     ],
     "mac": {
-      "bundleVersion": "25",
-      "helperBundleId": "chat.rocket.electron.helper",
       "category": "public.app-category.productivity",
       "target": [
         "dmg",
         "pkg",
         "zip",
         "mas"
-      ]
+      ],
+      "bundleVersion": "25",
+      "helperBundleId": "chat.rocket.electron.helper"
     },
     "nsis": {
-      "include": "build/win/installer.nsh",
       "oneClick": false,
       "perMachine": false,
       "allowElevation": true,
-      "allowToChangeInstallationDirectory": true
+      "allowToChangeInstallationDirectory": true,
+      "include": "build/win/installer.nsh"
     },
     "appx": {
       "backgroundColor": "#2f343d",
@@ -57,16 +57,23 @@
       ]
     },
     "linux": {
-      "desktop": {
-        "StartupWMClass": "Rocket.Chat+",
-        "MimeType": "x-scheme-handler/rocketchat"
-      },
       "category": "GNOME;GTK;Network;InstantMessaging",
       "target": [
         "tar.gz",
         "deb",
         "rpm"
-      ]
+      ],
+      "executableName": "rocketchat",
+      "desktop": {
+        "StartupWMClass": "Rocket.Chat+",
+        "MimeType": "x-scheme-handler/rocketchat"
+      }
+    },
+    "deb": {
+        "fpm": [ "--name=rocketchat" ]
+    },
+    "rpm": {
+        "fpm": [ "--name=rocketchat" ]
     },
     "publish": [
       {
