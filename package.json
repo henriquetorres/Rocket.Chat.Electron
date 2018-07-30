@@ -60,20 +60,31 @@
       "category": "GNOME;GTK;Network;InstantMessaging",
       "target": [
         {
-            "target": "tar.gz",
-            "arch": [ "ia32", "x64" ]
+          "target": "tar.gz",
+          "arch": [
+            "ia32",
+            "x64"
+          ]
         },
         {
-            "target": "deb",
-            "arch": [ "ia32", "x64" ]
+          "target": "deb",
+          "arch": [
+            "ia32",
+            "x64"
+          ]
         },
         {
-            "target": "rpm",
-            "arch": [ "ia32", "x64" ]
+          "target": "rpm",
+          "arch": [
+            "ia32",
+            "x64"
+          ]
         },
         {
-            "target": "snap",
-            "arch": [ "x64" ]
+          "target": "snap",
+          "arch": [
+            "x64"
+          ]
         }
       ],
       "executableName": "rocketchat-desktop",
@@ -83,10 +94,14 @@
       }
     },
     "deb": {
-        "fpm": [ "--name=rocketchat-desktop" ]
+      "fpm": [
+        "--name=rocketchat-desktop"
+      ]
     },
     "rpm": {
-        "fpm": [ "--name=rocketchat-desktop" ]
+      "fpm": [
+        "--name=rocketchat-desktop"
+      ]
     },
     "publish": [
       {
