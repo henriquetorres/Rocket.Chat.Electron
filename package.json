@@ -59,33 +59,9 @@
     "linux": {
       "category": "GNOME;GTK;Network;InstantMessaging",
       "target": [
-        {
-          "target": "tar.gz",
-          "arch": [
-            "ia32",
-            "x64"
-          ]
-        },
-        {
-          "target": "deb",
-          "arch": [
-            "ia32",
-            "x64"
-          ]
-        },
-        {
-          "target": "rpm",
-          "arch": [
-            "ia32",
-            "x64"
-          ]
-        },
-        {
-          "target": "snap",
-          "arch": [
-            "x64"
-          ]
-        }
+        "tar.gz",
+        "deb",
+        "rpm"
       ],
       "executableName": "rocketchat-desktop",
       "desktop": {
